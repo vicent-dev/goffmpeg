@@ -82,6 +82,7 @@ type File struct {
 	pixFmt                string
 	rawInputArgs          []string
 	rawOutputArgs         []string
+	streamLoop            int
 }
 
 /*** SETTERS ***/
@@ -368,9 +369,14 @@ func (m *File) SetRawOutputArgs(args []string) {
 	m.rawOutputArgs = args
 }
 
+func (m *File) SetStreamLoop(v int) {
+	m.streamLoop = v
+}
+
 /*** GETTERS ***/
 
 // Deprecated: Use VideoFilter instead.
+
 func (m *File) Filter() string {
 	return m.VideoFilter()
 }
@@ -655,6 +661,10 @@ func (m *File) RawOutputArgs() []string {
 	return m.rawOutputArgs
 }
 
+func (m *File) StreamLoop() int {
+	return m.streamLoop
+}
+
 /** OPTS **/
 func (m *File) ToStrCommand() []string {
 	var strCommand []string
@@ -724,6 +734,7 @@ func (m *File) ToStrCommand() []string {
 		"OutputPath",
 		"Bframe",
 		"MovFlags",
+		"StreamLoop",
 	}
 
 	for _, name := range opts {
