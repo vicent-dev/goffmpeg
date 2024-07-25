@@ -376,7 +376,6 @@ func (m *File) SetStreamLoop(v int) {
 /*** GETTERS ***/
 
 // Deprecated: Use VideoFilter instead.
-
 func (m *File) Filter() string {
 	return m.VideoFilter()
 }
