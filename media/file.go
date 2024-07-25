@@ -1219,6 +1219,14 @@ func (m *File) ObtainRawOutputArgs() []string {
 	return m.rawOutputArgs
 }
 
+func (m *File) ObtainStreamLoop() []string {
+	if m.streamLoop != 0 {
+		return []string{"-stream_loop", fmt.Sprintf("%d", m.streamLoop)}
+	}
+
+	return nil
+}
+
 func CheckFileType(streams []Streams) string {
 	for i := 0; i < len(streams); i++ {
 		st := streams[i]

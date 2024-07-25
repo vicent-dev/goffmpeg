@@ -13,9 +13,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/vicent-dev/goffmpeg"
-	"github.com/vicent-dev/goffmpeg/media"
-	"github.com/vicent-dev/goffmpeg/pkg/duration"
+	"github.com/xfrr/goffmpeg"
+	"github.com/xfrr/goffmpeg/media"
+	"github.com/xfrr/goffmpeg/pkg/duration"
 )
 
 // Transcoder Main struct

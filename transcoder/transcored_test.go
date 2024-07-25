@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/vicent-dev/goffmpeg/media"
+	"github.com/xfrr/goffmpeg/media"
 )
 
 func TestTranscoder(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/vicent-dev/goffmpeg/transcoder"
+	"github.com/xfrr/goffmpeg/transcoder"
 )
 
 const (
